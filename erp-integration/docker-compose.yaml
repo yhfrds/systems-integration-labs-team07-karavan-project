@@ -6,3 +6,9 @@ services:
       - "8082:8080"
     networks:
       - karavan
+    environment:
+      # Don't ever do this in real scenario. Use proper environment vars!
+      - ERP_USER=alice
+      - ERP_PASSWORD=alice
+      - MQ_USER=guest
+      - MQ_PASSWORD=guest
