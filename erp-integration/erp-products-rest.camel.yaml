@@ -1,15 +1,9 @@
 - rest:
     id: rest-0824
+    description: REST
     get:
       - id: get-5e0a
         description: ERP Products Service
         path: products
         to: direct:erp-products-route
         routeId: erp-products-rest
-- route:
-    id: erp-products-route
-    from:
-      id: from-280a
-      uri: direct
-      parameters:
-        name: erp-products-route
