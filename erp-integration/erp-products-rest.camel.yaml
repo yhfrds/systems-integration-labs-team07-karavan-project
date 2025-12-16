@@ -5,5 +5,18 @@
       - id: get-5e0a
         description: ERP Products Service
         path: products
-        to: direct:erp-products-route
+        to: direct:erp-products-rest
         routeId: erp-products-rest
+- route:
+    id: erp-products-rest
+    from:
+      id: from-55d5
+      uri: direct
+      parameters:
+        name: erp-products-rest
+      steps:
+        - to:
+            id: to-3c88
+            uri: direct
+            parameters:
+              name: erp-products-route
